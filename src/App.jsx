@@ -183,8 +183,8 @@ function App() {
                     </a>
                   </span>
                   is exactly what you think: a classic game of battleship, to be
-                  played either vs. a computer opponent, or a
-                  friend&nbsp;locally.
+                  played against a computer opponent, written in
+                  vanilla&nbsp;JavaScript.
                 </p>
                 <Links
                   siteLink={"https://maybethee.github.io/battleship"}
