@@ -166,18 +166,18 @@ function App() {
               </li>
 
               <li className="project-container">
-                <a className="project-link" aria-disabled="true">
+                <a
+                  className="project-link"
+                  href="https://maybethee.github.io/battleship"
+                >
                   <img src="/battleship-screenshot.png" />
                 </a>
-                <span>
-                  SITE UNDER CONSTRUCTION <br />{" "}
-                </span>
+
                 <p className="project-description">
                   <span className="project-title">
                     <a
-                      aria-disabled={true}
-                      disabled={true}
                       className="project-link"
+                      href="https://maybethee.github.io/battleship"
                     >
                       Battleship
                     </a>
@@ -187,7 +187,7 @@ function App() {
                   friend&nbsp;locally.
                 </p>
                 <Links
-                  siteLink={""}
+                  siteLink={"https://maybethee.github.io/battleship"}
                   repoLink={"https://github.com/maybethee/battleship"}
                 />
               </li>

@@ -185,7 +185,7 @@ svg:hover {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(130, 21, 37);
+  color: #821525;
   position: relative;
   transition: color 0.1s ease-in-out;
 }
@@ -206,12 +206,13 @@ a:hover {
 
 .links-row-item a {
   font-weight: 600;
-  color: rgb(134, 65, 65);
+  color: #171a7d;
+  transition: color 0.2s ease-out;
 }
 
 .links-row-item a:hover {
   text-decoration: none;
-  color: rgb(93, 61, 61);
+  color: #17517d;
 }
 
 .links-row-item:not(:last-child)::after {
