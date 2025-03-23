@@ -8,7 +8,9 @@ function App() {
       <div className="wrapper">
         <div className="left-col">
           <div className="left-col-header">
-            <h1>Raphael Schnee</h1>
+            <h1>
+              <strong>Raphael Schnee</strong>
+            </h1>
             <div className="contact">
               <a href="https://github.com/maybethee">
                 <svg

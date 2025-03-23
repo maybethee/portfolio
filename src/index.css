@@ -97,35 +97,20 @@ svg:hover {
 }
 
 .wrapper {
-  height: 100%;
-  width: 100vw;
   display: flex;
-  column-gap: 2rem;
-}
-
-.left-col {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  padding: 0.6rem 0 0 0.6rem;
-}
-
-.right-col {
-  flex: 1;
-  padding: 1rem;
-  margin-left: 200px;
+  flex-flow: column;
 }
 
 .left-col h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 500;
 }
 
 .left-col-header {
   display: flex;
   flex-flow: row wrap;
+
+  margin: 0.5rem 0 0 0.5rem;
   row-gap: 0.5rem;
 }
 
@@ -136,22 +121,23 @@ svg:hover {
 }
 
 #projects {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 500px));
-  gap: 2rem;
+  margin: 1.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  row-gap: 2rem;
 }
 
 .project-container {
-  min-width: 400px;
-  max-width: 520px;
+  width: 100%;
   border-radius: 8px;
   display: flex;
+  align-items: flex-start;
   flex-flow: column;
 }
 
 .project-title {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   padding: 1rem 0rem 0.5rem 0rem;
   text-align: center;
   font-weight: 500;
@@ -163,9 +149,13 @@ svg:hover {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.85rem;
-  line-height: 170%;
-  padding-top: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 150%;
+  padding: 0.5rem 0;
+}
+
+.project-link {
+  width: 100%;
 }
 
 .project-link img {
@@ -196,12 +186,11 @@ a:hover {
 
 .links-row {
   display: flex;
-  /* justify-content: flex-end; */
   margin: 0.3rem 0;
 }
 
 .links-row-item {
-  font-size: 0.8rem;
+  font-size: 1.1rem;
 }
 
 .links-row-item a {
@@ -269,14 +258,62 @@ a:hover {
 }
 
 @media (min-width: 576px) {
+  .wrapper {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-flow: row;
+    column-gap: 2rem;
+  }
+
+  .left-col {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    padding: 0.6rem 0 0 0.6rem;
+  }
+
+  .right-col {
+    flex: 1;
+    padding: 1rem;
+    margin-left: 200px;
+  }
+
   .header {
     font-size: 4rem;
   }
 
   #projects {
+    padding: 1rem;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 500px)); */
+    gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
     padding: 1.5rem;
+  }
+
+  .project-container {
+    min-width: 400px;
+    max-width: 520px;
+  }
+  .project-title {
+    font-size: 1.3rem;
+  }
+  .project-description {
+    font-size: 0.95rem;
+    padding-top: 0.5rem;
+    line-height: 170%;
+  }
+  .links-row-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 830px) {
+  #projects {
+    justify-items: center;
   }
 }
 
