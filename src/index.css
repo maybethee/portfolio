@@ -35,8 +35,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  background-color: #ffeeed;
-  animation: bgColor 25s infinite linear;
 }
 ol,
 ul {
@@ -59,6 +57,7 @@ table {
 }
 
 body {
+  overflow-x: hidden;
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -92,13 +91,40 @@ svg:hover {
   stroke: rgb(130, 21, 37);
 }
 
-#github-icon:hover {
+#github-icon:hover,
+#linkedin-icon:hover {
   fill: rgb(130, 21, 37);
 }
 
+svg.dark {
+  stroke: white;
+}
+svg.dark:hover {
+  stroke: #ff8a99;
+}
+
+#github-icon.dark,
+#linkedin-icon.dark {
+  fill: white;
+}
+
+#github-icon.dark:hover,
+#linkedin-icon.dark:hover {
+  fill: #ff8a99;
+}
+
 .wrapper {
+  background-color: #ffeeed;
+  color: black;
+  animation: bgColor 25s infinite linear;
   display: flex;
   flex-flow: column;
+}
+
+.wrapper.dark {
+  background-color: #3a1a19;
+  color: white;
+  animation: bgColorDark 25s infinite linear;
 }
 
 .left-col h1 {
@@ -142,7 +168,6 @@ svg:hover {
   text-align: center;
   font-weight: 500;
   letter-spacing: 1;
-  color: black;
 }
 
 .project-description {
@@ -175,9 +200,13 @@ svg:hover {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #821525;
+  color: rgb(130, 21, 37);
   position: relative;
   transition: color 0.1s ease-in-out;
+}
+
+a.dark {
+  color: #ff8a99;
 }
 
 a:hover {
@@ -202,6 +231,14 @@ a:hover {
 .links-row-item a:hover {
   text-decoration: none;
   color: #17517d;
+}
+
+.links-row-item.dark a {
+  color: #8a8dff;
+}
+
+.links-row-item.dark a:hover {
+  color: #7fd3ff;
 }
 
 .links-row-item:not(:last-child)::after {
@@ -239,6 +276,33 @@ a:hover {
   }
 }
 
+@keyframes bgColorDark {
+  0% {
+    background: #441f1e;
+  }
+  14% {
+    background: #2a2a16;
+  }
+  28% {
+    background: #1a2613;
+  }
+  42% {
+    background: #142618;
+  }
+  56% {
+    background: #112726;
+  }
+  70% {
+    background: #181b3a;
+  }
+  84% {
+    background: #2d1735;
+  }
+  100% {
+    background: #3a1920;
+  }
+}
+
 @keyframes glow {
   0% {
     box-shadow: 1px 1px 10px 1px rgba(162, 154, 154, 0.75);
@@ -257,7 +321,8 @@ a:hover {
   }
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) { */
+@media (min-width: 690px) {
   .wrapper {
     height: 100%;
     width: 100vw;
