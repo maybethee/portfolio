@@ -116,7 +116,7 @@ svg.dark:hover {
 .wrapper {
   background-color: #ffeeed;
   color: black;
-  animation: bgColor 25s infinite linear;
+  animation: bgColor 20s infinite linear;
   display: flex;
   flex-flow: column;
 }
@@ -124,7 +124,7 @@ svg.dark:hover {
 .wrapper.dark {
   background-color: #3a1a19;
   color: white;
-  animation: bgColorDark 25s infinite linear;
+  animation: bgColorDark 20s infinite linear;
 }
 
 .left-col h1 {
@@ -278,28 +278,28 @@ a:hover {
 
 @keyframes bgColorDark {
   0% {
-    background: #441f1e;
+    background: #0f0807;
   }
   14% {
-    background: #2a2a16;
+    background: #111008;
   }
   28% {
-    background: #1a2613;
+    background: #0c0f07;
   }
   42% {
-    background: #142618;
+    background: #060e09;
   }
   56% {
-    background: #112726;
+    background: #081010;
   }
   70% {
-    background: #181b3a;
+    background: #06070b;
   }
   84% {
-    background: #2d1735;
+    background: #0e0710;
   }
   100% {
-    background: #3a1920;
+    background: #10080b;
   }
 }
 

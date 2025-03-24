@@ -1,12 +1,10 @@
 import "./App.css";
 import Links from "./Links";
-import { Mail } from "lucide-react";
 import { useState } from "react";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  const setClass = () => {};
   return (
     <>
       <div className={`wrapper ${darkMode ? "dark" : "light"}`}>
