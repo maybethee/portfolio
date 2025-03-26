@@ -1,12 +1,12 @@
-function Links({ siteLink, repoLink, darkMode }) {
+function Links({ siteLink, repoLink }) {
   return (
     <ul className="links-row">
       {siteLink && (
-        <li className={`links-row-item ${darkMode ? "dark" : "light"}`}>
+        <li className={`links-row-item`}>
           <a href={siteLink}>site</a>
         </li>
       )}
-      <li className={`links-row-item ${darkMode ? "dark" : "light"}`}>
+      <li className={`links-row-item`}>
         <a href={repoLink}>repo</a>
       </li>
     </ul>

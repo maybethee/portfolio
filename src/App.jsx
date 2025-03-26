@@ -1,13 +1,27 @@
 import "./App.css";
 import Links from "./Links";
-import { useState } from "react";
+import useLocalStorage from "use-local-storage";
+import { useState, useEffect } from "react";
+import Project from "./Project";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const url = "/projects.json";
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setProjects(data);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   return (
     <>
-      <div className={`wrapper ${darkMode ? "dark" : "light"}`}>
+      <div className={`wrapper`} data-theme={darkMode ? "dark" : "light"}>
         <div className="left-col">
           <div className="left-col-header">
             <h1>
@@ -26,9 +40,7 @@ function App() {
                     strokeWidth="1.4"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`lucide lucide-moon ${
-                      darkMode ? "dark" : "light"
-                    }`}
+                    className={`lucide lucide-moon`}
                   >
                     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
                   </svg>
@@ -43,9 +55,7 @@ function App() {
                     strokeWidth="1.4"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`lucide lucide-sun ${
-                      darkMode ? "dark" : "light"
-                    }`}
+                    className={`lucide lucide-sun`}
                   >
                     <circle cx="12" cy="12" r="4" />
                     <path d="M12 2v2" />
@@ -61,7 +71,6 @@ function App() {
               </div>
               <a href="https://github.com/maybethee">
                 <svg
-                  className={`${darkMode ? "dark" : "light"}`}
                   id="github-icon"
                   role="img"
                   viewBox="-4 -2 31 31"
@@ -77,7 +86,6 @@ function App() {
               >
                 <svg
                   id="linkedin-icon"
-                  className={`${darkMode ? "dark" : "light"}`}
                   width="800px"
                   height="800px"
                   viewBox="-1 -1 27 27"
@@ -105,9 +113,7 @@ function App() {
                   strokeWidth="1.4"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className={`lucide lucide-mail ${
-                    darkMode ? "dark" : "light"
-                  }`}
+                  className={`lucide lucide-mail`}
                 >
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -119,238 +125,20 @@ function App() {
         <div className="right-col">
           <section id="projects-section">
             <ul id="projects">
-              <li className="project-container">
-                <a className="project-link" href="https://gawlf.fly.dev">
-                  <img src="/golf-screenshot.png" alt="" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://gawlf.fly.dev"
-                    >
-                      Gawlf
-                    </a>
-                  </span>
-                  is a turn-based multiplayer game to play online with friends,
-                  based on the classic playing card game Golf, made using React
-                  and Ruby on&nbsp;Rails.
-                </p>
-                <Links
-                  siteLink={"https://gawlf.fly.dev"}
-                  repoLink={"https://github.com/maybethee/gawlf"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a className="project-link" href="https://statchasing.fly.dev">
-                  <img src="statchasing-screenshot.png" alt="" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://statchasing.fly.dev"
-                    >
-                      Statchasing
-                    </a>
-                  </span>
-                  is a site for Rocket League players, made with React and Ruby
-                  on Rails, which provides interesting analytic data in addition
-                  to what can be found on{" "}
-                  <a
-                    className={`${darkMode ? "dark" : "light"}`}
-                    href="https://ballchasing.com"
-                  >
-                    ballchasing.com
-                  </a>
-                  , via its&nbsp;API.
-                </p>
-                <Links
-                  siteLink={"https://statchasing.fly.dev"}
-                  repoLink={"https://github.com/maybethee/statchasing"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a
-                  className="project-link"
-                  href="https://tchnlgy-str.netlify.app/"
-                >
-                  <img src="/shopping-cart-screenshot.png" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://tchnlgy-str.netlify.app/"
-                    >
-                      The Technology Store
-                    </a>
-                  </span>
-                  is a mock store made with React to practice implementing
-                  client-side routing using the React Router DOM library,
-                  featuring dummy products sourced from{" "}
-                  <a
-                    className={`${darkMode ? "dark" : "light"}`}
-                    href="https://fakestoreapi.com/"
-                  >
-                    Fake Store&nbsp;API
-                  </a>
-                  .
-                </p>
-                <Links
-                  siteLink={"https://tchnlgy-str.netlify.app/"}
-                  repoLink={"https://github.com/maybethee/shopping-cart"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a className="project-link" href="https://frendo.fly.dev/">
-                  <img src="frendo-screenshot.png" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://frendo.fly.dev/"
-                    >
-                      Frendo
-                    </a>
-                  </span>
-                  is a social media clone built with Ruby on Rails, complete
-                  with authentication using Devise, user profiles, and
-                  following&nbsp;functionality.
-                </p>
-                <Links
-                  siteLink={"https://frendo.fly.dev"}
-                  repoLink={"https://github.com/maybethee/frendo"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a className="project-link" href="https://pkmem.netlify.app/">
-                  <img src="/poke-memory-screenshot.png" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://pkmem.netlify.app/"
-                    >
-                      Poké-Memory
-                    </a>
-                  </span>
-                  is a simple memory game made with React using images sourced
-                  from&nbsp;
-                  <a
-                    className={`${darkMode ? "dark" : "light"}`}
-                    href="https://pokeapi.co/"
-                  >
-                    PokéAPI
-                  </a>
-                  .
-                </p>
-                <Links
-                  siteLink={"https://pkmem.netlify.app/"}
-                  repoLink={"https://github.com/maybethee/poke-memory"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a
-                  className="project-link"
-                  href="https://maybethee.github.io/battleship"
-                >
-                  <img src="/battleship-screenshot.png" />
-                </a>
-
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://maybethee.github.io/battleship"
-                    >
-                      Battleship
-                    </a>
-                  </span>
-                  is exactly what you think: a classic game of battleship, to be
-                  played against a computer opponent, written in
-                  vanilla&nbsp;JavaScript.
-                </p>
-                <Links
-                  siteLink={"https://maybethee.github.io/battleship"}
-                  repoLink={"https://github.com/maybethee/battleship"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a
-                  className="project-link"
-                  href="https://maybethee.github.io/weather-app"
-                >
-                  <img src="/weather-app-screenshot.png" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://maybethee.github.io/weather-app"
-                    >
-                      Weather App
-                    </a>
-                  </span>
-                  (as the name suggests) checks the current weather in any city
-                  using{" "}
-                  <a
-                    className={`${darkMode ? "dark" : "light"}`}
-                    href="https://www.visualcrossing.com/weather-api"
-                  >
-                    Visual Crossing's API
-                  </a>
-                  , including the temperature in both Fahrenheit or Celsius.
-                  Also displays a cute icon depending on
-                  weather&nbsp;conditions!
-                </p>
-                <Links
-                  siteLink={"https://maybethee.github.io/weather-app"}
-                  repoLink={"https://github.com/maybethee/weather-app"}
-                  darkMode={darkMode}
-                />
-              </li>
-
-              <li className="project-container">
-                <a
-                  className="project-link"
-                  href="https://maybethee.github.io/js-todo"
-                >
-                  <img src="/todo-screenshot.png" />
-                </a>
-                <p className="project-description">
-                  <span className="project-title">
-                    <a
-                      className={`project-link ${darkMode ? "dark" : "light"}`}
-                      href="https://maybethee.github.io/js-todo"
-                    >
-                      TBD✓
-                    </a>
-                  </span>
-                  is a site that lets you track life's many projects and tasks
-                  with ease. Featuring persisting data, dynamic light/dark theme
-                  based on your system's theme, and some fancy&nbsp;animations.
-                </p>
-                <Links
-                  siteLink={"https://maybethee.github.io/js-todo"}
-                  repoLink={"https://github.com/maybethee/js-todo"}
-                  darkMode={darkMode}
-                />
-              </li>
+              {projects.map((project, index) => (
+                <li key={index} className="project-container">
+                  <Project
+                    title={project.title}
+                    description={project.description}
+                    imageUrl={project.imageUrl}
+                    liveUrl={project.liveUrl}
+                  />
+                  <Links
+                    siteLink={project.liveUrl}
+                    repoLink={project.repoUrl}
+                  />
+                </li>
+              ))}
             </ul>
           </section>
         </div>

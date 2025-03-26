@@ -56,6 +56,42 @@ table {
   border-spacing: 0;
 }
 
+:root {
+  --accent-color: rgb(130, 21, 37);
+  --text-and-stroke-color: black;
+  --default-bg-color: #ffeeed;
+  --bg-anim-0: #ffefee;
+  --bg-anim-14: #feffed;
+  --bg-anim-28: #f6ffed;
+  --bg-anim-42: #edfff0;
+  --bg-anim-56: #edfffe;
+  --bg-anim-70: #edefff;
+  --bg-anim-84: #f9edff;
+  --bg-anim-100: #ffedf3;
+  --box-shadow-color-1: rgba(162, 154, 154, 0.75);
+  --box-shadow-color-2: rgba(118, 113, 113, 0.75);
+  --extra-link-color: #171a7d;
+  --extra-link-hover-color: #17517d;
+}
+
+[data-theme="dark"] {
+  --accent-color: #ff8a99;
+  --text-and-stroke-color: white;
+  --default-bg-color: #0f0707;
+  --bg-anim-0: #0f0807;
+  --bg-anim-14: #111008;
+  --bg-anim-28: #0c0f07;
+  --bg-anim-42: #060e09;
+  --bg-anim-56: #081010;
+  --bg-anim-70: #06070b;
+  --bg-anim-84: #0e0710;
+  --bg-anim-100: #10080b;
+  --box-shadow-color-1: rgba(162, 154, 154, 0.75);
+  --box-shadow-color-2: rgba(118, 113, 113, 0.75);
+  --extra-link-color: #8a8dff;
+  --extra-link-hover-color: #7fd3ff;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Rubik", sans-serif;
@@ -63,16 +99,7 @@ body {
   font-style: normal;
 }
 
-span {
-  font-weight: 500;
-  margin: 0.5rem;
-  font-size: 0.8rem;
-  text-align: center;
-  font-style: italic;
-}
-
 span.project-title {
-  font-style: normal;
   margin: 0 7px 0 0;
 }
 
@@ -83,48 +110,30 @@ span.project-title {
 svg {
   width: 35px;
   height: 35px;
-  stroke: black;
+  stroke: var(--text-and-stroke-color);
   transition: stroke 0.3s ease, fill 0.3s ease;
 }
 
 svg:hover {
-  stroke: rgb(130, 21, 37);
+  stroke: var(--accent-color);
+}
+
+#github-icon,
+#linkedin-icon {
+  fill: var(--text-and-stroke-color);
 }
 
 #github-icon:hover,
 #linkedin-icon:hover {
-  fill: rgb(130, 21, 37);
-}
-
-svg.dark {
-  stroke: white;
-}
-svg.dark:hover {
-  stroke: #ff8a99;
-}
-
-#github-icon.dark,
-#linkedin-icon.dark {
-  fill: white;
-}
-
-#github-icon.dark:hover,
-#linkedin-icon.dark:hover {
-  fill: #ff8a99;
+  fill: var(--accent-color);
 }
 
 .wrapper {
-  background-color: #ffeeed;
-  color: black;
+  background-color: var(--default-bg-color);
+  color: var(--text-and-stroke-color);
   animation: bgColor 20s infinite linear;
   display: flex;
   flex-flow: column;
-}
-
-.wrapper.dark {
-  background-color: #3a1a19;
-  color: white;
-  animation: bgColorDark 20s infinite linear;
 }
 
 .left-col h1 {
@@ -160,21 +169,22 @@ svg.dark:hover {
   display: flex;
   align-items: flex-start;
   flex-flow: column;
+  row-gap: 0.5rem;
 }
 
-.project-title {
+.project-title a {
+  display: inline;
   font-size: 1.6rem;
-  padding: 1rem 0rem 0.5rem 0rem;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1;
 }
 
-.project-description {
+.project-description span {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 150%;
   padding: 0.5rem 0;
 }
@@ -200,13 +210,9 @@ svg.dark:hover {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(130, 21, 37);
+  color: var(--accent-color);
   position: relative;
   transition: color 0.1s ease-in-out;
-}
-
-a.dark {
-  color: #ff8a99;
 }
 
 a:hover {
@@ -224,23 +230,14 @@ a:hover {
 
 .links-row-item a {
   font-weight: 600;
-  color: #171a7d;
+  color: var(--extra-link-color);
   transition: color 0.2s ease-out;
 }
 
 .links-row-item a:hover {
   text-decoration: none;
-  color: #17517d;
+  color: var(--extra-link-hover-color);
 }
-
-.links-row-item.dark a {
-  color: #8a8dff;
-}
-
-.links-row-item.dark a:hover {
-  color: #7fd3ff;
-}
-
 .links-row-item:not(:last-child)::after {
   content: "\00a0\00a0|";
 }
@@ -251,77 +248,48 @@ a:hover {
 
 @keyframes bgColor {
   0% {
-    background: #ffefee;
+    background: var(--bg-anim-0);
   }
   14% {
-    background: #feffed;
+    background: var(--bg-anim-14);
   }
   28% {
-    background: #f6ffed;
+    background: var(--bg-anim-28);
   }
   42% {
-    background: #edfff0;
+    background: var(--bg-anim-42);
   }
   56% {
-    background: #edfffe;
+    background: var(--bg-anim-56);
   }
   70% {
-    background: #edefff;
+    background: var(--bg-anim-70);
   }
   84% {
-    background: #f9edff;
+    background: var(--bg-anim-84);
   }
   100% {
-    background: #ffedf3;
+    background: var(--bg-anim-100);
   }
 }
-
-@keyframes bgColorDark {
-  0% {
-    background: #0f0807;
-  }
-  14% {
-    background: #111008;
-  }
-  28% {
-    background: #0c0f07;
-  }
-  42% {
-    background: #060e09;
-  }
-  56% {
-    background: #081010;
-  }
-  70% {
-    background: #06070b;
-  }
-  84% {
-    background: #0e0710;
-  }
-  100% {
-    background: #10080b;
-  }
-}
-
 @keyframes glow {
   0% {
-    box-shadow: 1px 1px 10px 1px rgba(162, 154, 154, 0.75);
+    box-shadow: 1px 1px 10px 1px var(--box-shadow-color-1);
   }
   100% {
-    box-shadow: 0px 0px 10px 2px rgba(118, 113, 113, 0.75);
+    box-shadow: 0px 0px 10px 2px var(--box-shadow-color-2);
   }
 }
 
 @keyframes glow-reverse {
   0% {
-    box-shadow: 0px 0px 10px 2px rgba(118, 113, 113, 0.75);
+    box-shadow: 0px 0px 10px 2px var(--box-shadow-color-2);
   }
   100% {
-    box-shadow: 1px 1px 10px 1px rgba(162, 154, 154, 0.75);
+    box-shadow: 1px 1px 10px 1px var(--box-shadow-color-1);
   }
 }
 
-/* @media (min-width: 576px) { */
 @media (min-width: 690px) {
   .wrapper {
     height: 100%;
@@ -353,7 +321,6 @@ a:hover {
   #projects {
     padding: 1rem;
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(400px, 500px)); */
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     padding: 1.5rem;
@@ -363,10 +330,10 @@ a:hover {
     min-width: 400px;
     max-width: 520px;
   }
-  .project-title {
+  .project-title a {
     font-size: 1.3rem;
   }
-  .project-description {
+  .project-description span {
     font-size: 0.95rem;
     padding-top: 0.5rem;
     line-height: 170%;
