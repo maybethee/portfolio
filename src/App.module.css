@@ -1,10 +1,6 @@
 /* Dev Page */
 
-span.project-title {
-  margin: 0 7px 0 0;
-}
-
-.contact-link:hover {
+.contactLink:hover {
   text-decoration: none;
 }
 
@@ -21,13 +17,13 @@ svg:hover {
   stroke: var(--accent-color);
 }
 
-#github-icon,
-#linkedin-icon {
+#githubIcon,
+#linkedinIcon {
   fill: var(--text-and-stroke-color);
 }
 
-#github-icon:hover,
-#linkedin-icon:hover {
+#githubIcon:hover,
+#linkedinIcon:hover {
   fill: var(--accent-color);
 }
 
@@ -39,12 +35,12 @@ svg:hover {
   flex-flow: column;
 }
 
-.left-col h1 {
+.leftCol h1 {
   font-size: 2.8rem;
   font-weight: 500;
 }
 
-.left-col-header {
+.leftColHeader {
   display: flex;
   flex-flow: row wrap;
 
@@ -66,7 +62,7 @@ svg:hover {
   row-gap: 2rem;
 }
 
-.project-container {
+.projectContainer {
   width: 100%;
   border-radius: 8px;
   display: flex;
@@ -75,7 +71,7 @@ svg:hover {
   row-gap: 0.5rem;
 }
 
-.project-title a {
+.projectTitle a {
   display: inline;
   font-size: 1.6rem;
   text-align: center;
@@ -83,7 +79,7 @@ svg:hover {
   letter-spacing: 1;
 }
 
-.project-description span {
+.projectDescription span {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
   font-style: normal;
@@ -92,11 +88,11 @@ svg:hover {
   padding: 0.5rem 0;
 }
 
-.project-link {
+.projectLink {
   width: 100%;
 }
 
-.project-link img {
+.projectLink img {
   background-position: center;
   object-fit: cover;
   object-position: 50% 1%;
@@ -106,7 +102,7 @@ svg:hover {
   animation: glow-reverse 250ms ease-in-out forwards;
 }
 
-.project-link img:hover {
+.projectLink img:hover {
   animation: glow 250ms ease-in-out forwards;
 }
 
@@ -122,30 +118,30 @@ a:hover {
   text-decoration: underline;
 }
 
-.links-row {
+.linksRow {
   display: flex;
   margin: 0.3rem 0;
 }
 
-.links-row-item {
+.linksRowItem {
   font-size: 1.1rem;
 }
 
-.links-row-item a {
+.linksRowItem a {
   font-weight: 600;
   color: var(--extra-link-color);
   transition: color 0.2s ease-out;
 }
 
-.links-row-item a:hover {
+.linksRowItem a:hover {
   text-decoration: none;
   color: var(--extra-link-hover-color);
 }
-.links-row-item:not(:last-child)::after {
+.linksRowItem:not(:last-child)::after {
   content: "\00a0\00a0|";
 }
 
-.links-row-item:not(:first-child) {
+.linksRowItem:not(:first-child) {
   padding-left: 8px;
 }
 
@@ -202,7 +198,7 @@ a:hover {
     column-gap: 2rem;
   }
 
-  .left-col {
+  .leftCol {
     position: fixed;
     top: 0;
     left: 0;
@@ -211,7 +207,7 @@ a:hover {
     padding: 0.6rem 0 0 0.6rem;
   }
 
-  .right-col {
+  .rightCol {
     flex: 1;
     padding: 1rem;
     margin-left: 200px;
@@ -229,19 +225,19 @@ a:hover {
     padding: 1.5rem;
   }
 
-  .project-container {
+  .projectContainer {
     min-width: 400px;
     max-width: 520px;
   }
-  .project-title a {
+  .projectTitle a {
     font-size: 1.3rem;
   }
-  .project-description span {
+  .projectDescription span {
     font-size: 0.95rem;
     padding-top: 0.5rem;
     line-height: 170%;
   }
-  .links-row-item {
+  .linksRowItem {
     font-size: 0.9rem;
   }
 }

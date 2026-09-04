@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import Links from "./Links";
 import useLocalStorage from "use-local-storage";
 import { useState, useEffect } from "react";
@@ -9,6 +9,7 @@ function App() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
+    // should be in a separate gitignored file perhaps?
     const url = "/projects.json";
 
     fetch(url)
@@ -21,13 +22,13 @@ function App() {
 
   return (
     <>
-      <div className={`wrapper`} data-theme={darkMode ? "dark" : "light"}>
-        <div className="left-col">
-          <div className="left-col-header">
+      <div className={styles.wrapper} data-theme={darkMode ? "dark" : "light"}>
+        <div className={styles.leftCol}>
+          <div className={styles.leftColHeader}>
             <h1>
               <strong>Raphael Schnee</strong>{" "}
             </h1>
-            <div className="contact">
+            <div className={styles.contact}>
               <div onClick={() => setDarkMode(!darkMode)}>
                 {!darkMode ? (
                   <svg
@@ -81,11 +82,11 @@ function App() {
                 </svg>
               </a>
               <a
-                className="contact-link"
+                className={styles.contactLink}
                 href="https://www.linkedin.com/in/raphael-schnee"
               >
                 <svg
-                  id="linkedin-icon"
+                  id={styles.linkedinIcon}
                   width="800px"
                   height="800px"
                   viewBox="-1 -1 27 27"
@@ -100,7 +101,7 @@ function App() {
                 </svg>
               </a>
               <a
-                className="contact-link"
+                className={styles.contactLink}
                 href="mailto:raphaelschnee.send@gmail.com"
               >
                 <svg
@@ -122,11 +123,11 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="right-col">
-          <section id="projects-section">
-            <ul id="projects">
+        <div className={styles.rightCol}>
+          <section id={styles.projectsSection}>
+            <ul id={styles.projects}>
               {projects.map((project, index) => (
-                <li key={index} className="project-container">
+                <li key={index} className={styles.projectContainer}>
                   <Project
                     title={project.title}
                     description={project.description}
