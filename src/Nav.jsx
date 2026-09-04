@@ -9,13 +9,13 @@ function Nav() {
           <Link to="/">𝔯𝔰</Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/about">About</Link>
+          <Link to="/">About</Link>
         </li>
         <li className={styles.navLink}>
           <Link to="/work">Work</Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/contact">Contact</Link>
+          <Link to="/">Contact</Link>
         </li>
       </ul>
     </>

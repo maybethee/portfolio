@@ -1,4 +1,4 @@
-// import Root from "./Root";
+import Root from "./Root";
 import Home from "./Home";
 import App from "./App";
 import Work from "./Work";
@@ -9,15 +9,21 @@ import Work from "./Work";
 const routes = [
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/work",
-    element: <Work />,
-  },
-  {
-    path: "/dev",
-    element: <App />,
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/work",
+        element: <Work />,
+      },
+      {
+        path: "/dev",
+        element: <App />,
+      },
+    ],
   },
 ];
 

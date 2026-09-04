@@ -6,7 +6,6 @@ function Home() {
   return (
     <>
       <div>
-        <Nav />
         <p>
           Hi, I'm Raphael Schnee. I'm a writer, editor, web developer, and
           abstract strategy board game enthusiast. I'm also interested in

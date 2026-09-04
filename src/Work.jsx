@@ -1,10 +1,8 @@
 import styles from "./Work.module.css";
-import Nav from "./Nav.jsx";
 
 function Work() {
   return (
     <>
-      <Nav />
       <div id={styles.wrapper}>
         <h1 className={styles.section}>Writing</h1>
         <h2 className={styles.subSection}>Poetry</h2>
