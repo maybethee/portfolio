@@ -5,6 +5,15 @@
   font-size: 3rem;
 }
 
-#wrapper {
-  font-size: 1.4rem;
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: 10px auto;
+  border-collapse: collapse;
+  border-top: 1px solid #000000;
+}
+
+table,
+td {
+  border-bottom: 3px solid red;
 }

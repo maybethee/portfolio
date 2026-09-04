@@ -7,9 +7,12 @@
 
 .navLink {
   text-align: center;
-  border: solid black 2px;
   width: 100%;
   padding: 10px;
+}
+
+.navLink:not(#star) {
+  border: solid black 2px;
 }
 
 #nav #star {

@@ -98,3 +98,11 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.nav-link:not(.home-btn) {
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  color: black;
+}

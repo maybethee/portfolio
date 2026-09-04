@@ -6,16 +6,24 @@ function Nav() {
     <>
       <ul id={styles.nav}>
         <li id={styles.star} className={styles.navLink}>
-          <Link to="/">𝔯𝔰</Link>
+          <Link to="/" className="nav-link home-btn">
+            𝔯𝔰
+          </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/">About</Link>
+          <Link to="/" className="nav-link">
+            About
+          </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/work">Work</Link>
+          <Link to="/work" className="nav-link">
+            Work
+          </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/">Contact</Link>
+          <Link to="/" className="nav-link">
+            Contact
+          </Link>
         </li>
       </ul>
     </>
