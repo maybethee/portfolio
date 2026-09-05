@@ -3,20 +3,18 @@
   justify-content: space-around;
   gap: 10px;
   padding: 10px;
+  font-size: 1rem;
+  font-weight: 200;
 }
 
 .navLink {
   text-align: center;
   width: 100%;
-  padding: 10px;
+  padding: 8px;
 }
 
 .navLink:not(#star) {
-  border: solid black 2px;
-}
-
-#star:hover {
-  text-decoration: none;
+  border: solid 1px var(--accent-color);
 }
 
 #nav #star {
