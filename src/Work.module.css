@@ -10,7 +10,6 @@
   width: 95%;
   margin: 10px auto;
   border-collapse: collapse;
-  /* border-bottom: 1px solid var(--accent-color); */
 }
 
 #workTable a {
@@ -19,14 +18,14 @@
 
 #workTable,
 #workTable td {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--dark-accent-color);
 }
 
 #workTable th {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
+  color: var(--dark-accent-color);
+  border-bottom: 1px solid var(--dark-accent-color);
 }
 
 #workTable th,
@@ -76,6 +75,6 @@
 #workTable td:nth-child(1):hover a {
   transition: none !important;
   animation: none !important;
-  background-color: var(--accent-color);
+  background-color: var(--dark-accent-color);
   color: white;
 }

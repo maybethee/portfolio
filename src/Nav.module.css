@@ -4,7 +4,7 @@
   gap: 10px;
   padding: 10px;
   font-size: 1rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .navLink {
@@ -13,8 +13,12 @@
   padding: 8px;
 }
 
+.navLink a {
+  color: var(--dark-accent-color);
+}
+
 .navLink:not(#star) {
-  border: solid 1px var(--accent-color);
+  border: solid 1px var(--dark-accent-color);
 }
 
 #nav #star {
