@@ -1,35 +1,35 @@
 [
   {
     "title": "Gawlf",
-    "description": "is a turn-based multiplayer game to play online with friends, based on the classic playing card game Golf, made using React and Ruby on&nbsp;Rails.",
+    "description": " is a turn-based multiplayer game to play online with friends, based on the classic playing card game Golf, made using React and Ruby on&nbsp;Rails.",
     "imageUrl": "gawlf-screenshot.png",
     "liveUrl": "https://gawlf.fly.dev",
     "repoUrl": "https://github.com/maybethee/gawlf"
   },
   {
     "title": "Statchasing",
-    "description": "is a site for Rocket League players, made with React and Ruby on Rails, which provides interesting analytic data in addition to what can be found on [ballchasing.com](https://ballchasing.com), via its&nbsp;API.",
+    "description": " is a site for Rocket League players, made with React and Ruby on Rails, which provides interesting analytic data in addition to what can be found on [ballchasing.com](https://ballchasing.com), via its&nbsp;API.",
     "imageUrl": "statchasing-screenshot.png",
     "liveUrl": "https://statchasing.fly.dev",
     "repoUrl": "https://github.com/maybethee/statchasing"
   },
   {
     "title": "The Technology Store",
-    "description": "is a mock store made with React to practice implementing client-side routing using the React Router DOM library, featuring dummy products sourced from [Fake Store&nbsp;API](https://fakestoreapi.com/).",
+    "description": " is a mock store made with React to practice implementing client-side routing using the React Router DOM library, featuring dummy products sourced from [Fake Store&nbsp;API](https://fakestoreapi.com/).",
     "imageUrl": "shopping-cart-screenshot.png",
     "liveUrl": "https://tchnlgy-str.netlify.app/",
     "repoUrl": "https://github.com/maybethee/shopping-cart"
   },
   {
     "title": "Poké-Memory",
-    "description": "is a simple memory game made with React using images sourced from&nbsp;[PokéAPI](https://pokeapi.co/).",
+    "description": " is a simple memory game made with React using images sourced from&nbsp;[PokéAPI](https://pokeapi.co/).",
     "imageUrl": "poke-memory-screenshot.png",
     "liveUrl": "https://pkmem.netlify.app/",
     "repoUrl": "https://github.com/maybethee/poke-memory"
   },
   {
     "title": "Battleship",
-    "description": "is exactly what you think: a classic game of battleship, to be played against a computer opponent, written in vanilla&nbsp;JavaScript.",
+    "description": " is exactly what you think: a classic game of battleship, to be played against a computer opponent, written in vanilla&nbsp;JavaScript.",
     "imageUrl": "battleship-screenshot.png",
     "liveUrl": "https://maybethee.github.io/battleship",
     "repoUrl": "https://github.com/maybethee/battleship"

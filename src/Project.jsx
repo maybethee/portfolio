@@ -10,8 +10,7 @@ const Project = ({ title, description, imageUrl, liveUrl }) => {
       </a>
       <p className={styles.projectDescription}>
         <span className={styles.projectTitle}>
-          {/* includes one space after title */}
-          <a href={liveUrl}>{title} </a>
+          <a href={liveUrl}>{title}</a>
         </span>
         <span
           dangerouslySetInnerHTML={{ __html: md.renderInline(description) }}

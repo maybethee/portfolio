@@ -88,6 +88,10 @@ svg:hover {
   padding: 0.5rem 0;
 }
 
+.projectDescription a:hover {
+  text-decoration: underline;
+}
+
 .projectLink {
   width: 100%;
 }
@@ -112,10 +116,6 @@ a {
   color: var(--accent-color);
   position: relative;
   transition: color 0.1s ease-in-out;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 .linksRow {
