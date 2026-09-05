@@ -11,18 +11,18 @@ function Nav() {
           </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/" className="nav-link">
-            About
-          </Link>
-        </li>
-        <li className={styles.navLink}>
           <Link to="/work" className="nav-link">
             Work
           </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/" className="nav-link">
-            Contact
+          <Link to="/blog" className="nav-link">
+            Blog
+          </Link>
+        </li>
+        <li className={styles.navLink}>
+          <Link to="/dev" className="nav-link">
+            /dev
           </Link>
         </li>
       </ul>

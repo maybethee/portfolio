@@ -1,0 +1,26 @@
+#contactContainer {
+  display: flex;
+  flex: auto;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 70px;
+  max-width: 900px;
+}
+
+#contactContainer p {
+  width: 60%;
+}
+
+#contactContainer a {
+  text-decoration: underline;
+  color: var(--dark-accent-color);
+}
+
+#contactContainer a span {
+  color: black;
+}
+
+#contactContainer a span:hover {
+  color: var(--dark-accent-color);
+}
