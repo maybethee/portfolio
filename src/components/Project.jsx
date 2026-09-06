@@ -1,5 +1,5 @@
 import markdownit from "markdown-it";
-import styles from "./App.module.css";
+import styles from "../styles/Dev.module.css";
 
 const Project = ({ title, description, imageUrl, liveUrl }) => {
   const md = markdownit({ html: true });

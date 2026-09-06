@@ -1,6 +1,6 @@
 import { useLocation, Outlet } from "react-router-dom";
 import Nav from "./Nav";
-import styles from "./Root.module.css";
+// import styles from "./Root.module.css";
 
 function Root() {
   const location = useLocation();
@@ -8,9 +8,9 @@ function Root() {
 
   return (
     <>
-      <div id={styles.bg}>
+      <div>
         {!isHidden && (
-          <div id={styles.bg}>
+          <div>
             <Nav />
           </div>
         )}

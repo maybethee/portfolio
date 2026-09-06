@@ -1,10 +1,10 @@
-import styles from "./App.module.css";
+import styles from "../styles/Dev.module.css";
 import Links from "./Links";
 import useLocalStorage from "use-local-storage";
 import { useState, useEffect } from "react";
 import Project from "./Project";
 
-function App() {
+function Dev() {
   const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
   const [projects, setProjects] = useState([]);
 
@@ -148,4 +148,4 @@ function App() {
   );
 }
 
-export default App;
+export default Dev;

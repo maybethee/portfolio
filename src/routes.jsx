@@ -1,11 +1,8 @@
-import Root from "./Root";
-import Home from "./Home";
-import App from "./App";
-import Work from "./Work";
-import Blog from "./Blog";
-// import ErrorPage from "./ErrorPage";
-// import Products from "./Products";
-// import Cart from "./Cart";
+import Root from "./components/Root";
+import Home from "./components/Home";
+import Dev from "./components/Dev";
+import Work from "./components/Work";
+import Contact from "./components/Contact";
 
 const routes = [
   {
@@ -21,12 +18,12 @@ const routes = [
         element: <Work />,
       },
       {
-        path: "/blog",
-        element: <Blog />,
+        path: "/contact",
+        element: <Contact />,
       },
       {
         path: "/dev",
-        element: <App />,
+        element: <Dev />,
       },
     ],
   },

@@ -1,4 +1,4 @@
-import styles from "./App.module.css";
+import styles from "../styles/Dev.module.css";
 
 function Links({ siteLink, repoLink }) {
   return (

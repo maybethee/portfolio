@@ -1,4 +1,4 @@
-import styles from "./Work.module.css";
+import styles from "../styles/Work.module.css";
 
 function Work() {
   return (
@@ -136,6 +136,19 @@ function Work() {
             <tr>
               <td>
                 <a
+                  href="https://www.bonebouquet.org/product/issue-9-1"
+                  target="_blank"
+                >
+                  INTIMATE SCALE
+                </a>
+              </td>
+              <td>Bone Bouquet</td>
+              <td>2018</td>
+              <td>Poetry</td>
+            </tr>
+            <tr>
+              <td>
+                <a
                   href="https://letter-r.square.site/product/issue-8/18?cs=true&amp;cst=custom"
                   target="_blank"
                 >
@@ -170,19 +183,6 @@ function Work() {
               </td>
               <td>Tagvverk</td>
               <td>2017</td>
-              <td>Poetry</td>
-            </tr>
-            <tr>
-              <td>
-                <a
-                  href="https://www.bonebouquet.org/product/issue-9-1"
-                  target="_blank"
-                >
-                  INTIMATE SCALE
-                </a>
-              </td>
-              <td>Bone Bouquet</td>
-              <td>???</td>
               <td>Poetry</td>
             </tr>
             <tr>

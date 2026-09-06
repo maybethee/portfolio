@@ -1,4 +1,4 @@
-import styles from "./Nav.module.css";
+import styles from "../styles/Nav.module.css";
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -11,13 +11,13 @@ function Nav() {
           </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/work" className="nav-link">
-            Work
+          <Link to="/contact" className="nav-link">
+            Contact
           </Link>
         </li>
         <li className={styles.navLink}>
-          <Link to="/blog" className="nav-link">
-            Blog
+          <Link to="/work" className="nav-link">
+            Work
           </Link>
         </li>
         <li className={styles.navLink}>

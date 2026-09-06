@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+import styles from "../styles/Home.module.css";
 import Nav from "./Nav.jsx";
 import { Link } from "react-router-dom";
 
@@ -7,10 +7,11 @@ function Home() {
     <>
       <main>
         <div id={styles.aboutContainer}>
+          <p>Hi, I'm Raphael Schnee.</p>
           <p>
-            Hi, I'm Raphael Schnee. I'm a writer, editor, and web developer. I'm
-            interested in online radio, language acquisition, psychotherapy, and
-            the abstract strategy board game Go.
+            I'm a writer, editor, and web developer. I'm also interested in
+            language acquisition, online radio, psychotherapy, and the abstract
+            strategy board game Go.
           </p>
           <p>
             Send inquiries, greetings, or your favorite{" "}
