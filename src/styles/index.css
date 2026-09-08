@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/* prettier-ignore */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%; */
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* prettier-ignore */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --accent-color: rgb(130, 21, 37);
+  --dark-accent-color: #a30016;
+  --text-and-stroke-color: black;
+  --default-bg-color: #ffeeed;
+  --bg-anim-0: #ffefee;
+  --bg-anim-14: #feffed;
+  --bg-anim-28: #f6ffed;
+  --bg-anim-42: #edfff0;
+  --bg-anim-56: #edfffe;
+  --bg-anim-70: #edefff;
+  --bg-anim-84: #f9edff;
+  --bg-anim-100: #ffedf3;
+  --box-shadow-color-1: rgba(162, 154, 154, 0.75);
+  --box-shadow-color-2: rgba(118, 113, 113, 0.75);
+  --extra-link-color: #171a7d;
+  --extra-link-hover-color: #17517d;
+  background-color: var(--default-bg-color);
+}
+
+[data-theme="dark"] {
+  --accent-color: #ff8a99;
+  --text-and-stroke-color: white;
+  --default-bg-color: #0f0707;
+  --bg-anim-0: #0f0807;
+  --bg-anim-14: #111008;
+  --bg-anim-28: #0c0f07;
+  --bg-anim-42: #060e09;
+  --bg-anim-56: #081010;
+  --bg-anim-70: #06070b;
+  --bg-anim-84: #0e0710;
+  --bg-anim-100: #10080b;
+  --box-shadow-color-1: rgba(162, 154, 154, 0.75);
+  --box-shadow-color-2: rgba(118, 113, 113, 0.75);
+  --extra-link-color: #8a8dff;
+  --extra-link-hover-color: #7fd3ff;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  /* flex: 1 0 auto; */
+  justify-content: center;
+}
+
+.nav-link:not(.home-btn) {
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  color: black;
+}

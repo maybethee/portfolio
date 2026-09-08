@@ -1,0 +1,35 @@
+#aboutContainer {
+  display: flex;
+  flex-flow: column;
+  row-gap: 20px;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  padding: 0 20px;
+  max-width: 700px;
+  line-height: 1.7rem;
+}
+
+#aboutContainer a {
+  text-decoration: underline;
+  color: var(--dark-accent-color);
+}
+
+#aboutContainer a span {
+  color: black;
+}
+
+#aboutContainer a span:hover {
+  color: var(--dark-accent-color);
+}
+
+/* Mobile Styles */
+
+@media (max-width: 690px) {
+  #aboutContainer {
+    font-size: 1.2rem;
+  }
+}

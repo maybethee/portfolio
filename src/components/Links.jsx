@@ -1,12 +1,15 @@
+import styles from "../styles/Dev.module.css";
+
 function Links({ siteLink, repoLink }) {
   return (
-    <ul className="links-row">
+    <ul className={styles.linksRow}>
       {siteLink && (
-        <li className={`links-row-item`}>
+        <li className={styles.linksRowItem}>
           <a href={siteLink}>site</a>
         </li>
       )}
-      <li className={`links-row-item`}>
+
+      <li className={styles.linksRowItem}>
         <a href={repoLink}>repo</a>
       </li>
     </ul>
