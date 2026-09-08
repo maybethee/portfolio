@@ -10,7 +10,7 @@ function Dev() {
 
   useEffect(() => {
     // should be in a separate gitignored file perhaps?
-    const url = "/projects.json";
+    const url = "/../projects.json";
 
     fetch(url)
       .then((response) => response.json())
